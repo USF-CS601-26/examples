@@ -30,4 +30,7 @@ public class Student  {
         return name;
     }
 
+    public double getAverageGPA() {
+        return averageGPA;
+    }
 }
