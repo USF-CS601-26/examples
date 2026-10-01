@@ -1,6 +1,7 @@
 package designpatterns.creational.factorymethod.simplepizzafactory;
 
-public class SimplePizzaFactory implements PizzaFactory{
+// Example from Head First Design Patterns
+public class SimplePizzaFactory implements PizzaFactory {
 
 	@Override
 	public Pizza createPizza(String type) {

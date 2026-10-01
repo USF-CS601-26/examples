@@ -1,6 +1,7 @@
 package designpatterns.creational.factorymethod.simplepizzafactory;
 
 /** Using a simple factory. This is better than PizzaStoreV1, since we encapsulated things that may change */
+// Example from Head First Design Patterns
 public class PizzaStore {
 	private PizzaFactory factory;
  

@@ -2,7 +2,7 @@ package designpatterns.creational.factorymethod.simplepizzafactory;
 
 import java.util.ArrayList;
 import java.util.List;
-
+// Example from Head First Design Patterns
 abstract public class Pizza {
 	private String name;
 	private String dough;
