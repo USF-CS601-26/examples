@@ -6,10 +6,10 @@ package designpatterns.creational.factorymethod.pizzafactorymethod;
 public class ChicagoPizzaStore extends PizzaStore {
 
 	@Override
-	Pizza createPizza(String item) {
-        	if (item.equals("cheese")) {
+	Pizza createPizza(String type) {
+        	if (type.equals("cheese")) {
             		return new ChicagoStyleCheesePizza();
-        	} else if (item.equals("pepperoni")) {
+        	} else if (type.equals("pepperoni")) {
             		return new ChicagoStylePepperoniPizza();
         	} else return null;
 	}

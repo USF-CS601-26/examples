@@ -5,7 +5,7 @@ package designpatterns.creational.factorymethod.pizzafactorymethod;
  */
 public abstract class PizzaStore {
  
-	abstract Pizza createPizza(String item);
+	abstract Pizza createPizza(String type);
 
 	public Pizza orderPizza(String type) {
 		Pizza pizza = createPizza(type);
