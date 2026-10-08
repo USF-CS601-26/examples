@@ -15,6 +15,7 @@ class Sorter {
     public void sort() {
         sortingStrategy.sort(array);
     }
+
     public void displayArray() {
         System.out.println(java.util.Arrays.toString(array));
     }

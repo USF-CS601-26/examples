@@ -1,7 +1,7 @@
 package designpatterns.behavioral.observer.jobpostings;
 
 public class CompanyExample {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         Subject company = new Company("Vrbo");
         Observer o1 = new Student("Aarthi P.");
         Observer o2 = new Student("Tracy L.");
