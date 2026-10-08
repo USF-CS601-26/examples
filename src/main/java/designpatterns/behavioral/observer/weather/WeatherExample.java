@@ -5,17 +5,20 @@ package designpatterns.behavioral.observer.weather;
  */
 public class WeatherExample {
 
-	public static void main(String[] args) {
+	static void main(String[] args) {
 		// Subject / Model ("Observable")
 		WeatherData weatherData = new WeatherData();
 
 		// Three Observers (want to be notified whenever Subject changes)
 		// These displays register themselves with the subject in the constructor
 		CurrentConditionsDisplay currentDisplay = 
-			new CurrentConditionsDisplay(weatherData);
-		StatisticsDisplay statisticsDisplay = new StatisticsDisplay(weatherData);
-		ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
+			new CurrentConditionsDisplay();
+		StatisticsDisplay statisticsDisplay = new StatisticsDisplay();
+		ForecastDisplay forecastDisplay = new ForecastDisplay();
 
+		weatherData.registerObserver(currentDisplay);
+		weatherData.registerObserver(statisticsDisplay);
+		weatherData.registerObserver(forecastDisplay);
 		// setMeasurements makes changes to WeatherData. WeatherData will notify
 		// all observers, and they will print info to the console
 		weatherData.setMeasurements(80, 65, 30.4f);
