@@ -41,7 +41,7 @@ public class LongestStringForkJoin {
                     new LongestStringTask(words, mid + 1, end);
 
             left.fork(); // computes asynchronously
-            String rightResult = right.compute(); // compute in this thread
+            String rightResult = right.compute(); // compute in this thread - invoke the same compute() method on a smaller range.
             String leftResult = left.join(); // wait for the left task to finish
 
             // Combine results
