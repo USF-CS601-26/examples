@@ -18,7 +18,7 @@ public class CompletableFutureExample {
         });
 
         // Set the function that will be executed when the result is ready
-        future.thenAccept(result -> {
+        future.thenApply(result -> result.toUpperCase()).thenAccept(result -> {
             System.out.println("Result: " + result);
         });
 
