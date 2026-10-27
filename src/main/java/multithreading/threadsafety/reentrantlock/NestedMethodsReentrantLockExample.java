@@ -1,4 +1,4 @@
-package multithreading.reentrantlock;
+package multithreading.threadsafety.reentrantlock;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package multithreading.reentrantlock;
+package multithreading.threadsafety.reentrantlock;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -44,7 +44,7 @@ public class ThreadSafeMapWithAdvancedLock {
         }
     }
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         ThreadSafeMapWithAdvancedLock tsMap = new ThreadSafeMapWithAdvancedLock();
         Thread t1 = new Thread(() -> {
             tsMap.addWord("one", "uno");
