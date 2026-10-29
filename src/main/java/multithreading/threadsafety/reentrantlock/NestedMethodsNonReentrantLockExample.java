@@ -9,25 +9,25 @@ class NestedMethodsNonReentrantLockExample {
     private final StampedLock lock = new StampedLock();
 
     public List<Integer> readData() {
-        lock.readLock();
+        long s = lock.readLock();
         try {
             return readNested(); // calling a method that also needs the read lock
         } finally {
-            lock.unlockRead(30);
+            lock.unlockRead(s);
         }
     }
 
     private List<Integer> readNested() {
-        lock.readLock();
+        long s = lock.readLock();
         try {
             return new ArrayList<>(data);
         } finally {
-            lock.unlockRead(30);
+            lock.unlockRead(s);
         }
     }
 
     public void writeData(int value)  {
-        lock.writeLock();
+        long s = lock.writeLock();
         try {
             // do some work ...
             Thread.sleep(100);
@@ -36,16 +36,16 @@ class NestedMethodsNonReentrantLockExample {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         } finally {
-            lock.unlockWrite(30);
+            lock.unlockWrite(s);
         }
     }
 
     public void writeInNested(int value) {
-        lock.writeLock();
+        long s = lock.writeLock();
         try {
             data.add(value);
         } finally {
-            lock.unlockWrite(30);
+            lock.unlockWrite(s);
         }
     }
 
