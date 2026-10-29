@@ -46,7 +46,7 @@ class NestedMethodsReentrantLockExample {
         }
     }
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         NestedMethodsReentrantLockExample ex = new NestedMethodsReentrantLockExample();
         Thread t1 = new Thread(() -> {
            ex.writeData(5);
