@@ -88,7 +88,7 @@ public class WebClientSSL {
         return request;
     }
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         String jsonResult = callAPI();
         System.out.println(jsonResult);
     }

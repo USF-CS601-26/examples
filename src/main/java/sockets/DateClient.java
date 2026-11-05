@@ -17,7 +17,7 @@ public class DateClient {
 	 * for the IP address or hostname of a host running the date server, then
 	 * connects to it and displays the date that it serves.
 	 */
-	public static void main(String[] args) {
+	static void main(String[] args) {
 		String serverAddress = JOptionPane
 				.showInputDialog("Enter IP Address of a machine that is" + System.lineSeparator() + "running the date service on port 9091:");
 		try {

@@ -17,7 +17,7 @@ public class DateServer {
 	/**
 	 * Runs the server.
 	 */
-	public static void main(String[] args) throws IOException {
+	static void main(String[] args) throws IOException {
 		ServerSocket listener = new ServerSocket(9091);
 		try {
 			while (true) {

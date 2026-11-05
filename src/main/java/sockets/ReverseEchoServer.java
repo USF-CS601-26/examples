@@ -43,7 +43,7 @@ import java.net.Socket;
 public class ReverseEchoServer {
 	public final static int PORT = 5534;
 	
-	public static void main(String[] args)  {
+	static void main(String[] args)  {
 		Socket connectionSocket = null;
 		try (ServerSocket welcomingSocket = new ServerSocket(ReverseEchoServer.PORT)) {
 			System.out.println("Server started: waiting for connections on port " + ReverseEchoServer.PORT);
