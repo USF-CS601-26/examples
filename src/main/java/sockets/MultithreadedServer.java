@@ -54,7 +54,7 @@ public class MultithreadedServer {
                     String input;
                     while (!connectionSocket.isClosed()) {
                         input = reader.readLine(); // read from the socket
-                        System.out.println("Server received: " + input); // echo the same string to the console
+                        System.out.println("Server received: " + input + " : " + Thread.currentThread().getName()); // echo the same string to the console
 
                         if (input.equals(EOT)) {
                             System.out.println("Server: Closing socket.");
