@@ -14,17 +14,16 @@ import java.net.URL;
 public class WebClientSSL {
 
     /**
-     * Creates a secure socket to communicate with googleapi's server that
-     * provides API about books , sends a GET request, and gets a response as a
+     * Creates a secure socket to communicate with the webserver, sends a GET request, and gets a response as a
      * string. The header of the response is not removed in this example."
      *
      * @return A String of the response.
      */
     public static String callAPI() {
         String s = "";
-        String urlString = "https://swapi.dev/api/planets/6/?format=json";//https://www.googleapis.com/books/v1/volumes?q=isbn:9787508318134";
+        // String urlString = "https://swapi.dev/api/planets/6/?format=json";//https://www.googleapis.com/books/v1/volumes?q=isbn:9787508318134";
 
-        //String urlString = "https://api.open-meteo.com/v1/forecast?latitude=37.7&longitude=122&current_weather=true";
+        String urlString = "https://api.open-meteo.com/v1/forecast?latitude=37.7&longitude=122&current_weather=true";
 
         PrintWriter out = null;
         BufferedReader in = null;
